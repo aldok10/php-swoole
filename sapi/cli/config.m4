@@ -25,10 +25,10 @@ if test "$PHP_CLI" != "no"; then
   PHP_ADD_MAKEFILE_FRAGMENT($abs_srcdir/sapi/cli/Makefile.frag)
 
   dnl Set filename.
-  SAPI_CLI_PATH=sapi/cli/php
+  SAPI_CLI_PATH=bin/swoole-cli
 
   dnl Select SAPI.
-  PHP_SELECT_SAPI(cli, program, php_cli.c php_http_parser.c php_cli_server.c ps_title.c php_cli_process_title.c, -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1, '$(SAPI_CLI_PATH)')
+  PHP_SELECT_SAPI(cli, program, php_cli.c php_http_parser.c php_cli_server.c ps_title.c patch.c php_cli_process_title.c, -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1, '$(SAPI_CLI_PATH)')
 
   case $host_alias in
   *aix*)
