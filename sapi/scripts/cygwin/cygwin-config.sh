@@ -15,7 +15,7 @@ cd ${__PROJECT__}
 
 ./buildconf --force
 test -f Makefile && make clean
-./configure --prefix=/usr --disable-all \
+./configure CFLAGS="-O2 -g" --prefix=/usr --disable-all \
     --disable-fiber-asm \
     --disable-cgi \
     --disable-phpdbg \
@@ -56,4 +56,5 @@ test -f Makefile && make clean
     --enable-redis \
     --with-imagick \
     --with-yaml \
-    --with-readline
+    --with-readline \
+    --enable-igbinary

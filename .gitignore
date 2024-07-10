@@ -302,6 +302,7 @@ tmp-php.ini
 # Special cases for build swoole under cygwin
 # ------------------------------------------------------------------------------
 pool/
+ext/igbinary
 ext/imagick
 ext/mongodb
 ext/redis
