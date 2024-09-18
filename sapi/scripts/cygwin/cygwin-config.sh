@@ -11,7 +11,7 @@ __PROJECT__=$(
 )
 cd ${__PROJECT__}
 
-
+export CFLAGS="-DZEND_WIN32=1 -DPHP_WIN32=1 -DWIN32 "
 
 ./buildconf --force
 test -f Makefile && make clean
