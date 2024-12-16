@@ -17,6 +17,7 @@ jobs:
       - name: Prepare submodule
         run: |
           git submodule update --init
+          cd ext/swoole && git checkout tags/v5.1.3
 
       - name: Cache cygwin packages
         id: cache-cygwin
